@@ -1,0 +1,517 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --hoverTextColor: #a01586;
+    --textColor: rgb(87, 85, 85);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: var(--textColor);
+}
+
+.header {
+    height: 72px;
+    outline: 1px solid #b8b7b7;
+    display: flex;
+    align-items: center;
+    padding: 0px 2px;
+    justify-content: space-between;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    font-weight: 400;
+    position: fixed;
+    background-color: white;
+}
+
+.headerleft,
+.headerright {
+    display: flex;
+    align-items: center;
+}
+
+.logocontainer {
+    width: 158px;
+}
+
+img {
+    width: 100%;
+}
+
+
+
+.inputsearchcontainer {
+    display: flex;
+    align-items: center;
+    border: 1px solid #9e9e9e;
+    border-radius: 3px;
+    width: 400px;
+    height: 45px;
+    margin-left: 35px;
+    padding: 5px;
+    position: relative;
+    z-index: 3;
+}
+
+.searchlogo {
+    width: 25px;
+    margin: 6px;
+}
+
+#forminput {
+    width: 100%;
+}
+
+.inputsearch {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.searchcloselogo {
+    width: 28px;
+    margin: 6px;
+    height: 25px;
+}
+
+#closelogo {
+    display: none;
+}
+
+.inputsearchcontainer:focus-within .inputboxmodel {
+    display: block;
+}
+
+.inputboxmodel {
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    top: 45px;
+    height: 380px;
+    width: 100%;
+    border-radius: 2px;
+    padding: 4px 15px;
+    display: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    z-index: 3;
+}
+
+#recentsearch {
+    color: #494949;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.recentlist {
+    display: flex;
+    align-items: center;
+}
+
+.recenticon {
+    width: 20px;
+    margin-right: 10px;
+}
+
+
+
+.downloadappbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-right: 20px;
+    position: relative;
+}
+
+.downloadappbtn:hover {
+    color: var(--hoverTextColor);
+    cursor: pointer;
+    text-shadow: 0.2px 0.2px 0 #a01586;
+    font-weight: 410;
+}
+
+.downloadappbtn p {
+    padding: 0;
+    margin: 0;
+    font-size: 17px;
+}
+
+.mobileicon {
+    width: 13px;
+    margin: 10px;
+    ;
+}
+
+.downloadbtncontainer {
+    position: absolute;
+    bottom: 0;
+    top: 60px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    width: 200px;
+    display: none;
+    height: 200px;
+    padding: 10px;
+    margin-left: -30px;
+    color: var(--textColor);
+    background-color: white;
+    z-index: 3;
+}
+
+.downloadappbtn:hover .downloadbtncontainer,
+.downloadappbtn:focus .downloadbtncontainer {
+    display: block;
+}
+
+.downloadbtn {
+    display: block;
+    width: 180px;
+    margin-top: 15px;
+}
+
+
+
+.becomesupiller {
+    padding: 0px 30px;
+    border-left: 1.5px solid #ccc;
+    border-Right: 1.5px solid #ccc;
+    font-size: 17px;
+}
+
+.profilecartcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.profilecontainer {
+    width: 30px;
+    margin: 30px;
+    height: 50px;
+}
+
+.profilecontainer:hover {
+    color: var(--hoverTextColor);
+    cursor: pointer;
+    text-shadow: 0.2px 0.2px 0 #a01586;
+    font-weight: 420;
+}
+
+.profileIcon {
+    padding: 5px;
+    height: 10px;
+}
+
+.profilecontainer:hover .profileboxcontainer,
+.profilecontainer:focus .profileboxcontainer {
+    display: block;
+}
+
+.profileboxcontainer {
+    position: absolute;
+    width: 250px;
+    margin-left: -120px;
+    height: 200px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    padding-top: 1px;
+    padding-left: 20px;
+    display: none;
+    color: var(--textColor);
+    background-color: white;
+    z-index: 3;
+}
+
+.profileboxcontainer p {
+    font-size: 11px;
+    margin-top: -10px;
+}
+
+#signupbtn {
+    font-size: 18px;
+    font-weight: 500;
+    width: 210px;
+    height: 45px;
+    margin-top: 10px;
+    color: white;
+    background-color: #a01586;
+    border: none;
+    border-radius: 5px;
+}
+
+.cartcontainer {
+    width: 30px;
+    margin: 30px;
+    height: 50px;
+}
+
+.cartIcon {
+    padding: 5px;
+    height: 10px;
+}
+
+
+
+/* navigation */
+nav {
+    width: 100%;
+    border-bottom: 1px solid #9e9e9e;
+    height: 40px;
+    margin-top: 90px;
+    /* position: fixed; */
+    background-color: white;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    list-style: none;
+    justify-content: space-between;
+    height: 40px;
+    position: relative;
+}
+
+nav ul li {
+    align-items: center;
+    height: 36px;
+}
+
+nav ul li:hover {
+    color: #a01586;
+    font-weight: 500;
+    border-bottom: 3px solid #a01586;
+}
+
+
+/* subMenu */
+.subMenu {
+    position: absolute;
+    background-color: white;
+    top: 39px;
+    /* height: 400px; */
+    height: auto;
+    left: 0;
+    right: 0;
+    margin: 0px 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    display: none;
+}
+
+nav ul li:hover .subMenu {
+    display: block;
+}
+
+.subMenuList {
+    display: flex;
+}
+
+.column {
+    padding: 0px 20px;
+    font-weight: 400;
+}
+.column a{
+    cursor:auto;
+    color: var(--textColor);
+    text-decoration: none;
+}
+.column:nth-of-type(even){
+    background-color: rgb(243, 239, 239);
+}
+
+
+
+/* lowest price container */
+.lowestpricecontainer{
+    display: flex;
+    margin:25px auto;
+    max-width: 1100px;
+}
+.lowestpricecontainer h1{
+    font-size: 40px;
+    margin: 0;
+    color:rgb(36, 31, 31);
+}
+.lowestpricetext{
+    width: 50%;
+    padding: 25px 0 0 25px;
+    background-color: azure;
+}
+.lowestpricetext a{
+    width: 380px;
+    display: block;
+    text-decoration: none;
+}
+.lowestpriceimg{
+    width: 50%;
+}
+.lowestpriceicons{
+    width: 500px;
+    height: 70px;
+    margin: 50px 0px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 4px;
+}
+.lowestpriceitems{
+    display: flex;
+    align-items: center;
+    margin: 5px;  
+    padding-right: 30px;
+
+    height: 40px;
+}
+#a{
+    border-right: 1px solid #2c2b2b;
+}
+.lowestpriceitems p{
+    height: 40px;
+    color: #2c2b2b;
+    font-weight: 500;
+}
+.freedeliveryicon{
+    width: 35px;
+    margin: 0px 8px;
+}
+.cashondeliveryicon{
+    width: 35px;
+    margin: 0px 8px;
+}
+.easyreturnicon{
+    width: 35px;
+    margin: 0px 8px;
+}
+.lowestpricedownloadbtn{
+    width: 350px;
+    height: 50px;
+    margin-left: 20px;
+    background-color: #a02088;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+}
+.lowestpricedownloadbtn img {
+    width: 25px;
+    margin: 10px 20px;
+}
+.lowestpricedownloadbtn h3{
+    height: 20px;
+    color: white;
+}
+
+
+/*     Top Categories to choose from  */
+.Topcategories{
+  width: 95%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin: 50px 10px;
+}
+
+.leftline{
+    width: 240px;
+    margin-left: 94px;
+    height: 1px;
+    background-color: #a02088;
+}
+.Topcategories span{
+    font-size: 39px;
+    padding-left: 37px;
+    font-weight: 600;
+}
+.rightline{
+    width: 240px;
+    margin-left: 35px;
+    height: 1px;
+    background-color: #a01586;
+}
+
+
+/* Be Fashion Forward */
+.BefashionForward{
+    width: 82%;
+    height: 600px;
+    margin-left: 122px;
+    background-image: url(https://images.meesho.com/images/marketing/1678691670429_1200.webp);
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.womenstoreimg {
+    padding: 80px 24px;
+}
+.menstoreimg{
+    margin-top: 221px;
+}
+.kidsstoreimg{
+    margin-top: 221px;
+}
+
+
+/* Essentials */
+.Essentials{
+    display: flex;
+    align-items: center;
+    width: 82%;
+    height: 600px;
+    margin-left: 122px;
+    background-image: url(https://images.meesho.com/images/marketing/1678691743015_1200.webp);
+    background-repeat: no-repeat;
+}
+.viewallimg {
+    padding: 0px 48px;
+}
+.Essentialsimgcontainer{
+    display: flex;
+    align-items: center;
+    width: 650px;
+    height: 375px;
+    margin-left: 15px;
+}
+
+.Essentialsimgs{
+    width: 197px;
+}
+#Essentialsimgs{
+    width: 170px;
+    margin-left: 10px;
+}
+#Essentialsimg2{
+    width: 170px;
+    height: 63px;
+    margin-left: 10px;  
+}
+.newstyles{
+    display: flex;
+    align-items: center;
+    width: 82%;
+    height: 600px;
+    margin-left: 122px;
+    background-image: url(https://images.meesho.com/images/marketing/1678691892265_1200.webp);
+    background-repeat: no-repeat;
+}
+.newstylesimgcontainer{
+    display: flex;
+    align-items: center;
+    width: 650px;
+    height: 375px;
+    margin-left: 15px;
+}
+
+.newstylesimgs{
+    width: 197px;
+}
+#newstylesimgs{
+    width: 170px;
+    margin-left: 10px;
+}
